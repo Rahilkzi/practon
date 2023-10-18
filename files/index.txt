@@ -1,0 +1,43 @@
+1. Writing a PL/SQL block with basic programming constructed by including following:
+	A)	Sequential Statements
+	B)	Unconditional Loop
+____________________________________________________________________________________________________
+
+2. Writing a PL/SQL block with basic programming constructed by including following:
+	A	If… then…Else, IF…ELSIF…ELSE…END IF
+	B)	Case Statement
+____________________________________________________________________________________________________
+
+3. Writing a PL/SQL Blocks with basic programming constructs for following iterative Structure:
+	A)	For-loop Statements
+	B)	While -loop statements.
+____________________________________________________________________________________________________
+
+4. Sequences:
+	A)	Creating simple Sequences with clauses like START, WITH INCREMENT BY, MAXVALUE, MINVALUE, CYCLE | NOCYCLE. CACHE | NOCACHE, ORDER | NOORDER.
+	B)	Creating and using Sequences for tables.
+____________________________________________________________________________________________________
+
+5. Write Procedures in PL/SQL Block
+	A) Create an empty procedure, replace procedure, and call it.
+	B) Create a stored procedure and call it.
+	C) Define procedure to insert data.
+____________________________________________________________________________________________________
+
+6.
+	A)	Define and call A function.
+	B)	 Define and use function in SELECT clause.
+	C)	Call functions in dbms_output.put_line 
+	D)	Recursive Function
+	E)	Count Employee from a function and return value back.
+____________________________________________________________________________________________________
+
+7. Creating and working with insert/update/delete trigger using before/after clause.
+	B)Create table empl backup.
+____________________________________________________________________________________________________
+
+8. Write an implicit and explicit cursor to complete the task.
+____________________________________________________________________________________________________
+
+9. Create packages and use it in SQL block to complete the task.
+____________________________________________________________________________________________________

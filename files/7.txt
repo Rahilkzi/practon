@@ -1,0 +1,43 @@
+Creating and working with insert/update/delete trigger using before/after clause.
+
+Create table customers with id,name,age,address,salary:
+
+create table Customers(ID number(1),Name varchar2(20),Age number(2),Address varchar2(20),Salary number(6,2));
+______________________________
+Q.Create table customers backup:
+
+create table Customers_back(ID number(1),Name varchar2(20),Age number(2),Address varchar2(20),Salary number(6,2));
+_____________________________________
+1.Inserting trigger using after clause:
+
+create or replace trigger Customers_after_insert
+AFTER INSERT ON Customers
+FOR EACH ROW
+begin
+insert into Customers_back values(:new.ID, :new.Name, :new.Age, :new.Address, :new.Salary);
+dbms_output.put_line('Record is successfully inserted into Customers_back table');
+end;
+/
+
++++++++++++++++++++++++++++++++++++++
+insert into customers values(8,'faizan',20,'rajapur',2000);
+++++++++++++++++++++++++++++++++++++++++++
+
+___________________________
+
+2.Updating trigger using after clause:
+
+create or replace trigger Customer_after_update
+AFTER INSERT ON Customers
+FOR EACH ROW
+begin
+update Customers_back set ID=:new.ID where ID=:old.ID;
+dbms_output.put_line('Record is successfully inserted into Customers_back table');
+end;
+/
+++++++++++++++++++++++++++++
+update Customers set ID=6 where ID=8;
++++++++++++++++++++++++++++++++
+
+
+

@@ -1,0 +1,56 @@
+Write Procedures in PL/SQL Block
+
+Create an empty procedure, replace procedure, and call it:
+
+set serveroutput on;
+create or replace procedure Hello is
+begin
+dbms_output.put_line('Hello World');
+end;
+/
+
+
+call it:
+
+begin
+Hello();
+end;
+/
+
+
+_____________________________________
+
+Create a stored procedure and call it :
+
+declare
+c_id customers.ID%type:=1;
+c_name customers.Name%type;
+c_address customers.Age%type;
+c_age customers.Address%type;
+c_salary customers.Salary%type;
+begin
+select Name,Age,Address,Salary into c_name,c_address,c_age,c_salary from customers where id=c_id;
+dbms_output.put_line('Customer '||c_name||' from '||c_age||' earns '||c_salary);
+end;
+/
+
+_________________________
+
+Define procedure to insert data:
+
+create or replace procedure insertData(ID in number,Name in varchar2, Age in number, Address in varchar2,Salary in number)
+is
+begin
+INSERT INTO Customers (ID, Name, Age, Address, Salary) VALUES (ID, Name, Age, Address, Salary);
+END;
+/
+
+__________________________________
+
+Insert data in table through procedure:
+
+begin
+insertData(6,'faizal',20,'lanja',2000);
+insertData(7,'ganesh',25,'lanja',1000);
+end;
+/

@@ -1,0 +1,139 @@
+1. Writing a PL/SQL block with basic programming constructed by including following:
+A)	Sequential Statements
+B)	Unconditional Loop
+
+A)	Sequential Statements
+1.	Using NULL statement
+Code:
+set serveroutput on;
+declare
+  a number(5);
+  begin
+  a:=&a;
+  if a > 1 then
+  a := a + 1;
+  dbms_output.put_line('The value of a is '||a);
+  else
+  NULL;
+ end if;
+ end;
+ /
+________________________________
+
+2.Using Go to statement:
+
+Code:
+
+declare
+  a number(5) :=20;
+  begin
+  <<loopstart>>
+  while a<30
+  loop
+  dbms_output.put_line('The value of a is '||a);
+  a := a + 1;
+  if a=25 then
+a := a + 1;
+ goto loopstart;
+ end if;
+ end loop;
+ end;
+ /
+
++++++++++++++++++++++++++++
+______________________________
+
+B)	Unconditional Loop
+1.	Using Exit statement
+Code:
+
+declare
+  i number(2):=51;
+  begin
+  dbms_output.put_line('The sequence is ');
+  loop
+  if i>60 then
+  exit;
+  end if;
+  dbms_output.put_line(' '||i);
+ i:=i+1;
+ end loop;
+ end;
+ /
+
+_______________________________________
+
+2.exit when statement:
+Code:
+
+declare
+  n number(3);
+  sq number(5);
+  begin
+  n := &n;
+  loop
+  sq := n*n;
+  insert into squares values(n,sq);
+  n:=n+1;
+ exit when n>15;
+ end loop;
+ end;
+ /
+
+Code1:
+SQL> set serveroutput on;
+SQL> declare
+  2  i number(2):=3;
+  3  begin
+  4  dbms_output.put_line('The sequence is ');
+  5  loop
+  6  if i>30 then
+  7  exit;
+  8  end if;
+  9  dbms_output.put_line(' '||i);
+ 10  i:=i+3;
+ 11  end loop;
+ 12  end;
+ 13  /
+_______________________________________________
+
+Code3:
+
+SQL> set serveroutput on;
+SQL> declare
+  2  i number(2):=11;
+  3  begin
+  4  dbms_output.put_line('The sequence is ');
+  5  loop
+  6  if i>20 then
+  7  exit;
+  8  end if;
+  9  dbms_output.put_line(' '||i);
+ 10  i:=i+1;
+ 11  end loop;
+ 12  end;
+ 13  /
+
+______________________________________________
+
+Code4:
+SQL> set serveroutput on;
+SQL> create table cube(n number(3), cb number(5));
+Table created.
+SQL> declare
+  2  n number(4);
+  3  cb number(4);
+  4  begin
+  5  n := &n;
+  6  loop
+  8  cb :=n*n*n;
+  9  insert into cube values(n,cb);
+ 10  n:=n+1;
+ 11  exit when n>10;
+ 12  end loop;
+ 13  end;
+ 14  /
+
+
+
+

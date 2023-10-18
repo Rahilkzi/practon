@@ -1,0 +1,133 @@
+A)	Define and call A function.
+B)	 Define and use function in SELECT clause.
+C)	Call functions in dbms_output.put_line 
+D)	Recursive Function
+E)	Count Employee from a function and return value back.
+
+1.Define and call A function:
+
+create or replace function fact(n in number)
+return number is
+fact number:=1;
+begin
+for i in 1..n
+loop
+fact:=fact*i;
+end loop;
+return fact;
+end;
+/
++++++++++++++++++++++++++
+Call function:
+
+declare
+n number;
+begin
+n:=fact(5);
+dbms_output.put_line('the factorial of 5 is'||n);
+end;
+/
+
+______________________________________________________
+2.Define and use function in SELECT clause:
+
+create or replace function greaterNumber(a in number, b in number,c in number)return number is
+begin
+if(a>b)and(a>c)then
+dbms_output.put_line('Greater number is '||a);
+return a;
+elsif(b>a)and(b>c)then
+dbms_output.put_line('Greater number is '||b);
+return b;
+else
+dbms_output.put_line('Greater number is '||c);
+return c;
+end if; 
+end;
+/
+++++++++++++++++++++++++
+
+declare
+n number;
+begin
+n:=greaterNumber(35,66,98);
+dbms_output.put_line(n);
+end;
+/
+
+
+3.Call functions in dbms_output.put_line:
+
+create or replace function multi(a in number, b in number)
+return number is
+begin
+dbms_output.put_line('the multiplication of two number is ');
+return(a*b);
+end;
+/
+
++++++++++++++++++++++++++
+
+begin
+dbms_output.put_line(multi(5,6));
+end;
+/
+______________________________________
+
+4.Recursive Function:
+
+create or replace function factorial(n in number)
+return number is
+begin
+if n=1 then
+return 1;
+else
+return(n*factorial(n-1));
+end if;
+end;
+/
+
+++++++++++++++++++++++++++++
+
+declare
+m number(4):=&n;
+n1 number(8);
+begin
+for n1 in 1..m
+loop
+dbms_output.put_line('factorial of '||n1||'is'||factorial(n1));
+end loop;
+end;
+/
+
+
+5.Count Employee from a function and return value back:
+
+create or replace function totalEmp return number is
+total number(2):=0;
+begin
+select count(*)into total from employee3;
+return total;
+end;
+/
+
++++++++++++++++++++++++++++
+
+declare
+c number(2);
+begin
+c:=totalEmp();
+dbms_output.put_line('Total number of employee are '||c);
+end;
+/
+
+
+
+
+
+
+
+
+
+
+
