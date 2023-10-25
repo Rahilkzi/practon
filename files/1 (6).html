@@ -1,0 +1,139 @@
+Create a XML file Internal/External DTD and using CSS & XSL.
+
+1.	CSS
+
+CODE:  
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<body bgcolor="green">
+<style type="text/css"></style>
+<!DOCTYPE book[
+<!ELEMENT book(bname,author,price)>
+<!ELEMENT bname(#PCDATA)>
+<!ELEMENT author(#PCDATA)>
+<!ELEMENT price(#PCDATA)>
+<div style="background-color: salmon; padding: 10px;">
+<p><book>
+<bname>Rahil Kazi</bname>
+<author>ACS</author>
+<price>(001)12-334</price>
+</p></book>
+</div>
+</body>
+
+OUTPUT:
+
+ 
+
+2.	XSL
+
+CODE:
+
+<?xml version="1.0"encoding="UTF-8">
+<xsl:stulessheetversion="1.0">
+<xsl:template match="/">
+<html>
+<style>
+h2{color:red;
+   text-align:left;
+}
+</style>
+
+<body>
+<h2>NSS Events</h2>
+<table border="1">
+<tr bgcolor="yellow">
+<th>Sr.No</th>
+<th>Title</th>
+<th>Place</th>
+<th>Date</th>
+</tr>
+
+<tr>
+<xsl:for-each select="name/class">
+</tr>
+<td>
+<xsl:value-of select="@bsr.no"/>
+01
+</td>
+<td>
+<xsl:value-of select="title"/>
+Tree Plantation
+</td>
+<td>
+<xsl:value-of select="place"/>
+kochri
+</td>
+<td>
+<xsl:value-of select="date"/>
+09-Aug-2023
+</td>
+
+
+<tr>
+<xsl:for-each select="name/class">
+</tr>
+<td>
+<xsl:value-of select="@bsr.no"/>
+02
+</td>
+<td>
+<xsl:value-of select="title"/>
+Blood Donation
+</td>
+<td>
+<xsl:value-of select="place"/>
+lanja
+</td>
+<td>
+<xsl:value-of select="date"/>
+09-Sep-2023
+</td>
+
+<tr>
+<xsl:for-each select="name/class">
+</tr>
+<td>
+<xsl:value-of select="@bsr.no"/>
+03
+</td>
+<td>
+<xsl:value-of select="title"/>
+Swachta hi sewa
+</td>
+<td>
+<xsl:value-of select="place"/>
+lanja
+</td>
+<td>
+<xsl:value-of select="date"/>
+16-Sep-2023
+</td>
+
+<tr>
+<xsl:for-each select="name/class">
+</tr>
+<td>
+<xsl:value-of select="@bsr.no"/>
+04
+</td>
+<td>
+<xsl:value-of select="title"/>
+Tree Plantation
+</td>
+<td>
+<xsl:value-of select="place"/>
+kochri
+</td>
+<td>
+<xsl:value-of select="date"/>
+03-Oct-2023
+</td>
+
+
+</table>
+</body>
+</html>
+</xsl:template>
+</xsl:stylessheet>
+

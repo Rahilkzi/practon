@@ -1,0 +1,266 @@
+Design webpage that make use of:
+A.	Table tags
+B.	Form tags
+C.	Navigation across multiple pages
+D.	Embedded multimedia elements
+
+I.	Table tags
+1.	Html code:
+<html>
+<body>
+<table border="1"cellpadding="4"cellspacing="5">
+<tr>
+<th>SY BSc</th>
+</tr>
+<tr>
+<td>Sana</td>
+<td>Alfii</td>
+</tr>
+</table>
+</body>
+</html>
+Output:
+ 
+2.	Html code:
+<html>
+<body>
+<table border="1"cellpadding="4"cellspacing="5">
+<tr>
+<th>Col 1</th>
+<th>Col 2</th>
+<th>Col 3</th>
+</tr>
+<tr>
+<td rowspan="2">Row 1 cell2</td>
+<td>Row 1 Cell 2</td>
+<td>Row 1 Cell 3</td>
+</tr>
+<tr>
+<td>Row 2 Cell 2</td>
+<td>Row 2 Cell 3</td>
+</tr>
+<tr>
+<td colspan="3"><center>Row 3 Cell 1</center></td>
+</tr>
+</table>
+Output:
+ 
+3.	Html code:
+<html>
+<head><center><b><Font size="5">Computer Science Second Year Timetable</Font><center></b></head>
+<title>Timetable</title>
+<body bgcolor="pink"
+<hr>
+<table border="2"bordercolor="Black" cellspacing="0" fontcolor="pink">
+<tr>
+<th>Time</th>
+<th>Monday</th> 
+<th>Tuesday</th> 
+<th>Wenesday</th> 
+<th>Thursday</th> 
+<th>Friday</th> 
+<th>Saturday</th> 
+</tr>
+<tr>
+<td>09:00AM-09:50AM</td>
+<td>TKC</td>
+<td>SMK</td>
+<td>AOK</td>
+<td>RRS</td>
+<td>AAS</td>
+<td>SMK</td>
+</tr>
+<tr>
+<td>09:50AM-10:40AM</td>
+<td>AOK</td>
+<td>AAS</td>
+<td>TKC</td>
+<td>SMK</td>
+<td>AOK</td>
+<td>RRS</td>
+</tr>
+<tr>
+<td>10:40AM-11:30AM</td>
+<td>RRS</td>
+<td>RRS</td>
+<td>SMK</td>
+<td>RRS</td>
+<td>TKC</td>
+<td>SMK</td>
+</tr>
+<tr>
+<td>11:30AM-11:40AM</td>
+<td colspan="6"><center>Prayer</center></td>
+<tr>
+<td>11:40AM-12:00AM</td>
+<td colspan="6"><center>Lunch Break</center></td>
+</tr>
+<tr>
+<td>12:00PM-02:30PM (Practical)</td>
+<td>AOK</td>
+<td>AAS</td>
+<td>SMK</td>
+<td>RRS</td>
+<td>SMK</td>
+<td>AAS</td>
+</tr>
+<tr>
+<td>02:30PM-03:20PM</td>
+<td>RRS</td>
+<td>AAS</td>
+<td><center>-</center></td>
+<td>SMK</td>
+<td><center>-</center></td>
+<td><center>-</center></td>
+</tr>
+</table>
+</body>
+</html>
+Output:
+ 
+
+II.	Form tags
+1.	Html code:
+<html>
+<head><h1><center>Login Form</h1></center></head>
+<body bgcolor="Sky blue">
+<center><form action="registration.html"><h3>
+Username:<br></h3>
+<input type="text" name="username" required><br><br><h3>
+Password:<br></h3>
+<input type="password" name="psw" required><br><br>
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</form></center>
+</body>
+</html>
+Output:
+1.	 
+
+
+2.	Html code:
+<html>
+<body>
+<h1>Registration Form</h1>
+<form>
+First name:<br>
+<input type="text"placeholder="Enter firstname"><br>
+Middle name:<br>
+<input type="text"placeholder="Enter middletname"><br>
+Last name:<br>
+<input type="text"placeholder="Enter lastname"><br>
+Date of Birth:<br>
+<input type="date"name="bday"><br>
+E-mail:<br>
+<input type="email"placeholder="Enter email"><br>
+User name:<br>
+<input type="text"placeholder="Enter username"><br>
+User password:<br>
+<input type="password"placeholder="Enter password"><br>
+Address:<br>
+<textarea input type="address"placeholder="Enter address"></textarea><br>
+Pincode:<br>
+<input type="text"placeholder="Enter pincode"><br>
+Gender:
+<input type="radio"name="gender"value="male"checked>Male
+<input type="radio"name="gender"value="female">Female
+<input type="radio"name="gender"value="other">Other<br>
+Select your favourite color:
+<input type="color"name="favcolor"><br>
+Language:
+<input type="checkbox" name="language">Marathi
+<input type="checkbox" name="language">Hindi
+<input type="checkbox" name="language">English<br>
+Category:<br>
+<select name="category">
+<option value="Open">Open</option>
+<option value="OBC">OBC</option>
+<option value="ST">ST</option>
+<option value="NT">NT</option>
+</select><br>
+About:<br>
+<textarea placeholder="About information"></textarea><br>
+<input type="Submit" value="Submit">
+<input type="Reset"value="Reset">
+</form>
+</body>
+</html>
+Output:
+ 
+
+I.	Navigation across multiple pages
+1.	Html code:
+<html>
+<h1><i><u><center><Font size="18" Face="Consolas" color="Red">This is home page</Font></center></i></u></h1>
+<body bgcolor="Pink"
+<center><a href="sa.html">This is first page &nbsp; &nbsp; &nbsp;</a>
+<a href="hp.html">This is second page &nbsp; &nbsp; &nbsp;</a>
+<a href="lp.html">This is third page &nbsp; &nbsp; &nbsp;</a>
+<a href="tr.html">This is fourth page &nbsp; &nbsp; &nbsp;</a></center>
+</body>
+</html>
+Output:
+ 
+2.	Html code:
+<html>
+<h1><u><i><center><Font size="18" Face="Times New Roman"color="Yellow">This is first page</i></center></Font></u></h1>
+<body bgcolor="Red">
+<center><a href="as.html">This is home page &nbsp; &nbsp; &nbsp;</a>
+<a href="hp.html">This is second page &nbsp; &nbsp; &nbsp;</a>
+<a href="lp.html">This is third page &nbsp; &nbsp; &nbsp;</a>
+<a href="tr.html">This is fourth page &nbsp; &nbsp; &nbsp;</a></center>
+</body>
+</html>
+Output:
+ 
+3.	Html code:
+<html>
+<h1><i><u><center><Font size="18"Face="Castellar"color="Navi Blue">This is second page</center></Font></i></u></h1>
+<body bgcolor="Magenta">
+<center><a href="as.html">This is home page &nbsp; &nbsp; &nbsp;</a>
+<a href="sa.html">This is first page &nbsp; &nbsp; &nbsp; </a>
+<a href="lp.html">This is third page &nbsp; &nbsp; &nbsp; </a>
+<a href="tr.html">This is fourth page &nbsp; &nbsp; &nbsp; </a></center>
+</body>
+</html>
+Output:
+ 
+4.	Html code:
+<html>
+<h1><i><u><center><Font size="18" Face="Algerian"color="Green">This is third page</center></Font></i></u></h1>
+<body bgcolor="Yellow">
+<center><a href="as.html">This is home page &nbsp; &nbsp; &nbsp;</a>
+<a href="sa.html">This is first page &nbsp; &nbsp; &nbsp;</a>
+<a href="hp.html">This is second page &nbsp; &nbsp; &nbsp;</a>
+<a href="tr.html">This is fourth page &nbsp; &nbsp; &nbsp;</a><center>
+</body>
+</html>
+Output:
+ 
+5.	Html code:
+<html>
+<h1><i><u><center><Font size="18" Face="Impact"color="Maroon">This is fourth page</Font></center></i></u></h1>
+<body bgcolor="Cyan">
+<center><a href="as.html">This is home page &nbsp; &nbsp; &nbsp;</a>
+<a href="sa.html">This is first page &nbsp; &nbsp; &nbsp;</a>
+<a href="hp.html">This is second page &nbsp; &nbsp; &nbsp;</a>
+<a href="lp.html">This is third page &nbsp; &nbsp; &nbsp;</a></center>
+</body>
+</html>
+Output:
+ 
+III.	Embedded multimedia elements 
+1.	Html code:
+2.	<video width="600" height="400" controls>
+3.	<source src="C:\Users\Sai Computers 1\Downloads\itachi.mp4" type="video/mp4">
+4.	</video>
+
+5.	Output:
+ 
+
+6.	Code:
+7.	<audio controls>
+8.	<source src="C:\Users\Sai Computers 1\Downloads\itachii.mp3" type="audio/mpeg">
+9.	</audio>
+10.	Output 
+
