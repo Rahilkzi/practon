@@ -1,0 +1,154 @@
+// java application to accept a student resume form Form
+
+import javax.swing.*;
+
+class Form
+{
+JFrame j;
+JScrollBar s;
+JLabel l,l1,l2,l3,l4,l5,l6,l7,l8,l9;
+JTextField t1,t2,t3,t4,t5,t6,t7,t8,t9;
+JButton b1,b2;
+JTextArea a;
+
+public Form()
+{
+j=new JFrame("Student Form");
+j.setLayout(null);
+
+s=new JScrollBar();
+j.add(s);
+
+
+
+l=new JLabel("Student Registration Form");
+l.setBounds(300,10,200,50);
+j.add(l);
+
+//LABELS
+
+//Firstname
+l1=new JLabel("Firstname: ");
+l1.setBounds(50,60,150,50);
+j.add(l1);
+
+//Lastname
+l1=new JLabel("Lastname: ");
+l1.setBounds(380,60,150,50);
+j.add(l1);
+
+
+//class
+l3=new JLabel("Class: ");
+l3.setBounds(50,100,150,50);
+j.add(l3);
+
+//DOB
+l2=new JLabel("Date of birth: ");
+l2.setBounds(50,140,150,50);
+j.add(l2);
+
+//rollno
+l4=new JLabel("Roll No: ");
+//HORIZONTAL VERTICAL WIDTH HIEGHT
+l4.setBounds(380,100,150,50);
+j.add(l4);
+
+//Division
+l5=new JLabel("Division: ");
+l5.setBounds(550,100,150,50);
+j.add(l5);
+
+
+//mobile
+l7=new JLabel("Mobile: ");
+l7.setBounds(50,190,150,50);
+j.add(l7);
+
+//email
+l8=new JLabel("Email: ");
+l8.setBounds(50,230,150,50);
+j.add(l8);
+
+//Bloodgroup
+l6=new JLabel("Blood Group: ");
+l6.setBounds(50,275,150,50);
+j.add(l6);
+
+//address
+l9=new JLabel("Address: ");
+l9.setBounds(50,325,150,50);
+j.add(l9);
+
+
+//TEXTFIELDS
+
+
+//Firstname
+t1=new JTextField("");
+t1.setBounds(150,70,200,30);
+j.add(t1);
+
+//Lastname
+t2=new JTextField("");
+t2.setBounds(460,70,200,30);
+j.add(t2);
+
+
+//class
+t4=new JTextField("");
+t4.setBounds(150,110,200,30);
+j.add(t4);
+
+//DOB
+t3=new JTextField("");
+t3.setBounds(150,150,200,30);
+j.add(t3);
+
+//RollNo
+t5=new JTextField("");
+t5.setBounds(460,110,50,30);
+j.add(t5);
+
+//division
+t6=new JTextField("");
+t6.setBounds(610,110,50,30);
+j.add(t6);
+
+//mobile
+t7=new JTextField("");
+t7.setBounds(150,195,200,30);
+j.add(t7);
+
+//email
+t8=new JTextField("");
+t8.setBounds(150,240,200,30);
+j.add(t8);
+
+//blood group
+t9=new JTextField("");
+t9.setBounds(150,285,50,30);
+j.add(t9);
+
+//address
+a=new JTextArea();
+a.setBounds(150,340,525,80);
+j.add(a);
+
+b1=new JButton("Next");
+b1.setBounds(200,450,200,40);
+j.add(b1);
+
+b2=new JButton("Reset");
+b2.setBounds(400,450,100,40);
+j.add(b2);
+
+j.setSize(800,1200);
+j.setVisible(true);
+}
+
+public static void main(String args[])
+{
+new Form();
+}
+}

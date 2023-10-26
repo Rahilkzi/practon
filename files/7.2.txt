@@ -1,0 +1,74 @@
+// gui to database
+
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.sql.*;
+class rnn implements ActionListener
+{
+JFrame j;
+JLabel l1,l2,l3;
+JTextField n1,n2,n3;
+JButton b;
+public rnn()
+{
+j=new JFrame("Employee");
+j.setLayout(null);
+
+l1=new JLabel("Id: ");
+l1.setBounds(50,20,200,50);
+j.add(l1);
+
+l2=new JLabel("Name: ");
+l2.setBounds(50,70,200,50);
+j.add(l2);
+
+l3=new JLabel("Dept: ");
+l3.setBounds(50,120,200,50);
+j.add(l3);
+
+n1=new JTextField();
+n1.setBounds(100,30,120,30);
+j.add(n1);
+
+n2=new JTextField();
+n2.setBounds(100,80,120,30);
+j.add(n2);
+
+n3=new JTextField();
+n3.setBounds(100,130,120,30);
+j.add(n3);
+
+b=new JButton("Submit");
+b.setBounds(50,190,100,40);
+j.add(b);
+b.addActionListener(this);
+
+j.setSize(500,500);
+j.setVisible(true);
+}
+
+public void actionPerformed(ActionEvent e)
+{
+int id =Integer.parseInt(n1.getText());
+String name=n2.getText();
+String dept=n3.getText();
+try{
+Class.forName("oracle.jdbc.driver.OracleDriver");  
+ Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","system");  
+Statement stmt=con.createStatement();  
+ String query= "insert into rnn values("+id+",'"+name+"','"+dept+"')";
+System.out.println(query);
+stmt.executeUpdate(query);
+JOptionPane.showMessageDialog(j, "Value Successfully Inserted");
+con.close();  
+}
+catch(Exception em){ System.out.println(em.getMessage());}  
+}
+
+public static void main(String args[])
+{
+new rnn();
+}
+}

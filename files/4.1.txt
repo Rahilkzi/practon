@@ -1,0 +1,24 @@
+// java list example and demonstrate method of java list interface
+
+import java.util.*;
+class listdemo
+{
+public static void main(String[] args){
+LinkedList list = new LinkedList();
+list.add("one");
+list.add("two");
+list.add("three");
+list.add("four");
+list.add("five");
+list.add("six");
+list.add("seven");
+list.add(1,"eight");
+System.out.println("Original content of list: "+list);
+list.removeFirst();
+list.removeLast();
+System.out.println("After removing first and last element: "+list);
+Object val=list.get(2);
+list.set(2,(String)val+"Changed");
+System.out.println("\nList after change: "+list);
+}
+}

@@ -1,0 +1,80 @@
+// concept of abstract class and method.
+
+import java.io.*;
+abstract class Shape
+{
+abstract void area();
+}
+class Triangle extends Shape
+{
+public void area()
+{
+double b,h,area;
+try{
+DataInputStream dis=new DataInputStream(System.in);
+System.out.println("Calculating area of Triangle");
+System.out.println("Entre Base");
+b=Float.parseFloat(dis.readLine());
+System.out.println("Entre height");
+h=Float.parseFloat(dis.readLine());
+area=0.5*b*h;
+System.out.println("Area of Triangle is: "+area);
+}
+catch(Exception e)
+{
+System.out.println(e.getMessage());
+}
+}
+}
+class Rectangle extends Shape
+{
+public void area()
+{
+double b,h,area;
+try{
+DataInputStream dis=new DataInputStream(System.in);
+System.out.println("Calculating area of Rectangle");
+System.out.println("Entre Base");
+b=Float.parseFloat(dis.readLine());
+System.out.println("Entre height");
+h=Float.parseFloat(dis.readLine());
+area=b*h;
+System.out.println("Area of Rectangle is: "+area);
+}
+catch(Exception e)
+{
+System.out.println(e.getMessage());
+}
+}
+}
+class Circle extends Shape
+{
+public void area()
+{
+double r,area;
+try{
+DataInputStream dis=new DataInputStream(System.in);
+System.out.println("Calculating area of Circle");
+System.out.println("Entre Radius");
+r=Float.parseFloat(dis.readLine());
+area=3.14*r*r;
+System.out.println("Area of circle is: "+area);
+}
+catch(Exception e)
+{
+System.out.println(e.getMessage());
+}
+}
+}
+public class CallingAll
+{
+public static void main(String args[])
+{
+Circle c=new Circle();
+Triangle t=new Triangle();
+Rectangle r=new Rectangle();
+c.area();
+t.area();
+r.area();
+}
+}
