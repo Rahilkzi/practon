@@ -14,7 +14,7 @@ destination_path = os.path.expanduser("~/Desktop/")
 
 for file_name in os.listdir(source_path):
     src_path = os.path.join(source_path, file_name)
-    with open(src_path, 'r') as file:
+    with open(src_path, 'r', encoding='utf-8') as file:
         if FullSearch == True:
             first_line = file.read()
         else:
