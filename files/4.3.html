@@ -1,0 +1,53 @@
+<!--Displaying Prime number in given range:-->
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+function calcPrimeNumber() {
+    var beginNum = parseInt(document.forms.numbers.firstNum.value);
+    var endNum = parseInt(document.forms.numbers.secondNum.value);
+    var primeNumbs = [];
+    var ctr = beginNum;
+    while (ctr <= endNum) {
+        if (isPrime(ctr)) {
+            primeNumbs.push(ctr);
+        }
+        ctr++;
+    }
+    if (primeNumbs.length === 0) {
+        document.getElementById('output_content').innerHTML = "There were no prime numbers within the range.";
+    } else {
+        outputPrimeNums(primeNumbs);
+    }
+}
+
+function isPrime(num) {
+    if (num <= 1) return false;
+    for (var i = 2; i <= Math.ceil(Math.sqrt(num)); i++) {
+        if (num % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function outputPrimeNums(primes) {
+    var html = "<h2>Prime Numbers</h2>";
+    for (var i = 0; i < primes.length; i++) {
+        html += primes[i] + "<br/>";
+    }
+    document.getElementById('output_content').innerHTML = html;
+}
+</script>
+</head>
+<body>
+<form name="numbers">
+Beginning Number: <input type="text" name="firstNum" />
+End Number: <input type="text" name="secondNum" />
+<input type="button" value="Find Prime Numbers" onclick="calcPrimeNumber()" />
+</form>
+<div id="output_content">
+</div>
+</body>
+</html>
+

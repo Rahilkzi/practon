@@ -1,0 +1,145 @@
+
+B.	Validating the various form elements.
+
+<br>
+
+
+1.Number validation function:<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validate() {
+  var num = document.myform.num.value;
+  if (isNaN(num)) {
+    document.getElementById("numloc").innerHTML = "Enter a numeric value only";
+    return false;
+  } else {
+    return true;
+  }
+}
+</script>
+</head>
+<body>
+<form name="myform" action="http://www.javatpoint.com/javascriptpages/valid.jsp" onsubmit="return validate()">
+  Number: <input type="text" name="num"><span id="numloc"></span><br/>
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+2.Name password Validation Functions:
+<html>
+<head>
+<script>
+function validateLogin()
+{
+var name=document.myform.name.value;
+var pwd=document.myform.pwd.value;
+document.write(name);
+if(name==null||name==="")
+{
+alert("Name can't be blank");
+return false;
+}
+if(pwd.length<6)
+{
+alert("password must be atleast 6 characters long");
+return false;
+}
+return true;
+}
+</script>
+</head>
+<body>
+<form name="myform">
+Username:
+<input type="text" name="name"/><br/>
+Password:
+<input type="password" name="pwd"/><br/>
+<input type="button"value="process"onClick="validateLogin();"/;>
+</form>
+</body>
+</html>
+
+ 
+
+
+
+
+
+
+
+
+
+
+3.	type password validation number:
+<html>
+<head>
+<script>
+function retype_pass()
+{
+var firstpwd=document.f1.firstpwd.value;
+var secondpwd=document.f1.secondpwd.value;
+if(firstpwd==secondpwd)
+{
+return true;
+}
+else
+{
+alert("password must be same!");
+return false;
+}
+}
+</script>
+</head>
+<body>
+<form name="f1">
+Name<input type="text" name="firstpwd"/><br/>
+Password<input type="text" name="secondpwd"/><br/>
+<input type="button" value="process" onclick="javascript:retype_pass()"/;>
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+4.	Email validation function:
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body bgcolor="cyan">
+<form name="myform" method="post" onsubmit="return validateemail()">
+  Email: <input type="text" name="email"><br/>
+  <input type="submit" value="Register">
+</form>
+
+<script>
+function validateemail() {
+  var x = document.myform.email.value;
+  var atposition = x.indexOf("@");
+  var dotposition = x.lastIndexOf(".");
+
+  if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= x.length) {
+    alert("Please enter a valid e-mail address\nat position: " + atposition + "\ndot position: " + dotposition);
+    return false;
+  }
+}
+</script>
+</body>
+</html>
+

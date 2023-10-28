@@ -1,0 +1,107 @@
+6.If-else Statement:
+ <?php  
+    $num=12;  
+    if($num%2==0)
+    {  
+    echo "$num is even number";  
+    }
+    else
+    {  
+    echo "$num is odd number";  
+    }  
+?>  
+
+
+
+
+7:Switch Statement:
+<?php
+$day = "5";
+switch ($day) {
+    case "1":
+        echo "It is Monday!";
+        break;
+    case "2":
+        echo "It is today!";
+        break;
+    case "3":
+        echo "It is Wednesday!";
+        break;
+	case "4":
+        echo "It is Thursday!";
+        break;
+    case "5":
+        echo "It is Friday!";
+        break;
+    case "6":
+        echo "It is Saturday!";
+        break;
+	case "7":
+        echo "It is Sunday!";
+        break;
+    default:
+        echo "Invalid number!";
+}
+?>
+ 
+
+
+8:if-else-ladder:
+<?php  
+    $marks=69;      
+    if ($marks<33)
+    {    
+        echo "fail";    
+    }    
+    else if ($marks>=34 && $marks<50) 
+    {    
+        echo "D grade";    
+    }    
+    else if ($marks>=50 && $marks<65) 
+    {    
+       echo "C grade";   
+    }    
+    else if ($marks>=65 && $marks<80) 
+    {    
+        echo "B grade";   
+    }    
+    else if ($marks>=80 && $marks<90) 
+    {    
+        echo "A grade";    
+    }  
+    else if ($marks>=90 && $marks<100) 
+    {    
+        echo "A+ grade";   
+    }  
+   else 
+   {    
+        echo "Invalid input";    
+    }    
+?>  
+
+
+
+9:do-while loop:
+Code:
+<?php 
+$x = 1;
+
+do {
+  echo "The number is: $x <br>";
+  $x++;
+} while ($x <= 20);
+?>
+
+10:Operator:
+      <?php
+         $a = 42;
+         $b = 20;
+         $c = $a + $b;
+         echo "Addtion Operation Result: $c <br/><br>";	        
+         $c = $a - $b;
+         echo "Substraction Operation Result: $c <br/><br>";         
+         $c = $a * $b;
+         echo "Multiplication Operation Result: $c <br/><br>";
+         $c = $a / $b;
+         echo "Division Operation Result: $c";   
+      ?>

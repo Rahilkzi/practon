@@ -1,0 +1,20 @@
+Create a XML file Internal/External DTD and using CSS_XMLCSS :
+
+<br>
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<body bgcolor="green">
+<style type="text/css"></style>
+<!DOCTYPE book[
+<!ELEMENT book(bname,author,price)>
+<!ELEMENT bname(#PCDATA)>
+<!ELEMENT author(#PCDATA)>
+<!ELEMENT price(#PCDATA)>
+<div style="background-color: salmon; padding: 10px;">
+<p><book>
+<bname>Rahil Kazi</bname>
+<author>ACS</author>
+<price>(001)12-334</price>
+</p></book>
+</div>
+</body>
