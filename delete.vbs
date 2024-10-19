@@ -4,7 +4,7 @@ Option Explicit
 Dim DestFolder, FolderName, FileName, FileName2, FileName3
 DestFolder = CreateObject("WScript.Shell").SpecialFolders("Desktop") & "\"
 FolderName = "files"
-FileName = "cap2.py"
+FileName = "fume.py"
 FileName2 = "openpi.py"
 FileName3 = "delete.vbs"
 
