@@ -4,7 +4,7 @@ Dim SourceFolder, DestFolder, FolderName, FileName, FileName2, FileName3
 SourceFolder = CreateObject("Scripting.FileSystemObject").GetAbsolutePathName(".")
 DestFolder = CreateObject("WScript.Shell").SpecialFolders("Desktop") & "\"
 FolderName = "files"
-FileName = "cap2.py"
+FileName = "fume.py"
 FileName2 = "openpi.py"
 FileName3 = "delete.vbs"
 
